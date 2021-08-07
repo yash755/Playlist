@@ -125,7 +125,7 @@ while page <= 2201:
                     tr_str = tr.text.strip()
 
                     if email == '':
-                        if 'Email' in tr_str:
+                        if 'Email' in tr_str and 'Submissions' not in tr_str:
                             email = tr_str
                             email = email.replace('Email','')
                             email = email.replace('\n', '')
