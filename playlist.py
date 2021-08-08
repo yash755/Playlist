@@ -34,7 +34,9 @@ while page <= 2201:
 
     trs = html1.find_all('tr')
 
-    if len(trs) < 1:
+    print (len(trs))
+
+    if len(trs) >= 1:
 
         for tr in trs:
 
@@ -201,7 +203,7 @@ while page <= 2201:
 
     else:
         file = open('data.txt','a+')
-        file.write(page + '\n')
+        file.write(str(page) + '\n')
         file.close()
 
 
